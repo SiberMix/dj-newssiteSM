@@ -5,14 +5,14 @@
     <title>{{ title }}</title>
 </head>
 <body>
-   <h1>{{ title }}</h1>
-   {% for i in news %}
-   <div>
-       <p>{{ i.title }}</p>
-       <p>{{ i.content }}</p>
-       <p>{{ i.created_at}}</p>
-   </div>
-   <hr>
-   {% endfor %}
+    <h1>{{ title }}</h1>
+    {% for i in news %}
+    <div>
+        <p>{{ i.title }}</p>
+        <p>{{ i.content }}</p>
+        <p>{{ i.created_at | date:"Y-m-d H:i" }}</p>
+    </div>
+    <hr>
+    {% endfor %}
 </body>
 </html>
