@@ -9,6 +9,9 @@ class News(models.Model):
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     is_published = models.BooleanField(default=True)
     category = models.ForeignKey('Category', on_delete=models.PROTECT, null=True)
+
+    def my_func(self):
+        return 'Hello, model'
     def __str__(self):
         return self.title
     class Meta:
